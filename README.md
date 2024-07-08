@@ -60,7 +60,7 @@ To produce the final "AI-Ready" file, the initial transformations were to:
 
 - Codes were kept in either uppercase or lowercase except for language codes, which were converted to lowercase according to ISO 639 recommendations, and country codes, which were converted to uppercase according to ISO 3166 recommendations. 
 
-- For text columns that contained values other than codes or time, the processing included removing contractions, white spaces, and punctuation, converting the text to lowercase, and checking all words longer than four characters for misspellings using the '''pyspellchecker''' module. We reviewed the list of identified misspellings, and any false hits (such as medication names) were added to the "do not change" list. For true misspellings that were not corrected properly by pyspellchecker, we assigned a proper correction and stored them in a dictionary for the final misspelling corrections. 
+- For text columns that contained values other than codes or time, the processing included removing contractions, white spaces, and punctuation, converting the text to lowercase, and checking all words longer than four characters for misspellings using the _pyspellchecker_ module. We reviewed the list of identified misspellings, and any false hits (such as medication names) were added to the "do not change" list. For true misspellings that were not corrected properly by pyspellchecker, we assigned a proper correction and stored them in a dictionary for the final misspelling corrections. 
 
 - All the null values in the text columns have been substituted with the phrase 'not reported'. 
 
