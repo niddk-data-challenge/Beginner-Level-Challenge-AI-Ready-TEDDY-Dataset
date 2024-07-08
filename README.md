@@ -91,4 +91,4 @@ Some potential use cases for the AI-ready dataset we generated include:
 We believe these use cases demonstrate the versatility and readiness of the dataset for a range of AI applications in type 1 diabetes research. 
 
 ## Questions?
-For questions about the Data Centric Challenge and this GitHub repository, please contact the NIDDK-CR Administrator at NIDDK-CRsupport@niddk.nih.gov.
+For questions about this GitHub repository or the Data Centric Challenge, please contact the NIDDK-CR Administrator at NIDDK-CRsupport@niddk.nih.gov
