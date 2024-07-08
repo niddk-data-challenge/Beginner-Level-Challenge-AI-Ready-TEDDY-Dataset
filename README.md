@@ -10,7 +10,8 @@ To make dataset file sizes more manageable to merge in the NIDDK-CR Analytics Wo
 
 | Study | Datasets |  Features *    |Participants| Sampling Schema |Data Dictionary |
 |------:|----------|----------------|------------|-----------------|----------------|
-|TEDDY|    48     |8,351            | 234,614    | All (n = 408) disease cases for T1D in TEDDY, identified by MaskID appearing in DIABETES_DIAGNOSIS dataset**. Subset (n = 409) non-disease controls, selected by simple random sample***.| [TEDDY_Data Challenge_Data Dictionary.pdf](https://repository.niddk.nih.gov/media/studies/teddy/TEDDY_Data_Challenge_Data_Dictionary.pdf)|
+|TEDDY|    48     |8,351            | 234,614    | All (n = 408) disease cases for T1D in TEDDY, identified by MaskID appearing in DIABETES_DIAGNOSIS dataset**. 
+Subset (n = 409) non-disease controls, selected by simple random sample***.| [TEDDY_Data Challenge_Data Dictionary.pdf](https://repository.niddk.nih.gov/media/studies/teddy/TEDDY_Data_Challenge_Data_Dictionary.pdf)|
 
 (*) Features that were fully empty (i.e., no non-missing values), free-text, or non-informative (i.e., all entries have the same value, or administrative variable) have been redacted from the study datasets. Please reference the [NIDDKCR_Data Challenge_TEDDY Redactions](https://github.com/niddk-data-challenge/Beginner-Level-Challenge-AI-Ready-TEDDY-Dataset/blob/3d84e4dc073dcf050ee96b76b12fff7cde55c749/Challenge%20Dataset%20Information/NIDDKCR_Data%20Challenge_TEDDY%20Redactions.xlsx) file that contains a list of features that were redacted/dropped from the TEDDY datasets.
 
