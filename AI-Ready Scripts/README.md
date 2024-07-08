@@ -1,4 +1,4 @@
-# Team-7
+## TEDDY AI-Ready Scripts - Instructions
 
 **In this project, there are three scripts:** qualityChecks_Team7.ipynb, data_processing_TEDDY.ipynb and TEDDY_data_dictionary.ipynb
 
