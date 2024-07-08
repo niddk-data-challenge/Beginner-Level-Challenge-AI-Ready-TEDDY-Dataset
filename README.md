@@ -32,7 +32,7 @@ Additional information about the TEDDY study and corresponding documentation (e.
 
 #### _AI-Ready Scripts_
 > [!IMPORTANT]
-> Scripts created by the winning team (ICF Inc.) to generate the AI-ready dataset for TEDDY are available in the [AI-Ready Scripts](https://github.com/niddk-data-challenge/Beginner-Level-Challenge-AI-Ready-TEDDY-Dataset/tree/541b5add6ff3608803cb60553987a2fe77798aca/AI-Ready%20Scripts) folder. This folder also contains instructions on running the scripts in the [README](https://github.com/niddk-data-challenge/Beginner-Level-Challenge-AI-Ready-TEDDY-Dataset/blob/541b5add6ff3608803cb60553987a2fe77798aca/AI-Ready%20Scripts/README.md) file and the data dictionary documenting the AI-ready dataset.
+> Scripts created by the winning team (ICF Inc.) to generate the AI-ready dataset for TEDDY are available in the [AI-Ready Scripts](https://github.com/niddk-data-challenge/Beginner-Level-Challenge-AI-Ready-TEDDY-Dataset/tree/541b5add6ff3608803cb60553987a2fe77798aca/AI-Ready%20Scripts) folder. Instructions on running the AI-ready scripts can be found in the [README](https://github.com/niddk-data-challenge/Beginner-Level-Challenge-AI-Ready-TEDDY-Dataset/blob/541b5add6ff3608803cb60553987a2fe77798aca/AI-Ready%20Scripts/README.md) file in this folder, as well as the data dictionary documenting the AI-ready dataset.
 
 Additional information about the AI-ready dataset, data enhancement steps and methods used to generate the AI-ready data, handling of missingness, and potential use-cases for the AI-ready dataset are described in detail below.
 
