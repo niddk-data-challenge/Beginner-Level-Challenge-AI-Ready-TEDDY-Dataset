@@ -64,8 +64,8 @@ To produce the final "AI Ready" file, the initial transformations were to:
 
 - For the categorical columns, we used one-hot encoding where each categorical variable in a column is represented by a binary vector. This resulted in creating additional columns for each categorical variable, with the column names including the categorical variable. If a categorical variable was present, its corresponding value in the column is set to “1”, and if it was not present, the value is set to “0”. The MaskID column was the only categorical column that was not included in the encoding process.
 
-#### _How did you handle the missing data_
-Yes. For string missing values, we replaced them with phrase "not reported". For numeric missing values, we evaluated the completeness of the numeric features and kept the tsfeatures with more than 50% completeness. To impute the missing values, we used the Multiple Imputation by Chained Equation algorithm. This algorithm performs multiple regression over the sample data and takes averages of them. We implemented this algorithm using the fancyimpute Python library. 
+#### _How did you handle missing data_
+For string missing values, we replaced them with phrase "not reported". For numeric missing values, we evaluated the completeness of the numeric features and kept the tsfeatures with more than 50% completeness. To impute the missing values, we used the Multiple Imputation by Chained Equation algorithm. This algorithm performs multiple regression over the sample data and takes averages of them. We implemented this algorithm using the fancyimpute Python library. 
 
 When binning the observations by timepoint, cases where a value was missing during a particular observation were replaced with the value of the closest timepoint. 
 
