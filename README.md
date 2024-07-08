@@ -19,7 +19,7 @@ To make dataset file sizes more manageable to merge in the NIDDK-CR Analytics Wo
 (***) Non-disease controls were sampled from MaskIDs in ENROLLMENT_FORM dataset after excluding MaskIDs of (n = 408) disease cases.
 
 > [!Important]
-> Documentation used to preprocess the TEDDY datasets to generate the Challenge-specific datasets described above are available in the [Challenge Dataset Information](link) folder. Please reference the [NIDDKCR_Data Challenge_TEDDY Redactions](link) file that contains a list of features that were redacted/dropped from the TEDDY datasets to generate the Challenge-specific datasets.
+> Documentation used to preprocess the TEDDY datasets to generate the Challenge-specific datasets described above are available in the [Challenge Dataset Information](https://github.com/niddk-data-challenge/Beginner-Level-Challenge-AI-Ready-TEDDY-Dataset/tree/8e33d338da451cbfb14079f8a6dd97cdbb032e9e/Challenge%20Dataset%20Information) folder. Please reference the [NIDDKCR_Data Challenge_TEDDY Redactions](link) file that contains a list of features that were redacted/dropped from the TEDDY datasets to generate the Challenge-specific datasets.
 
 If you are requesting access to, or have access to the TEDDY data from the NIDDK-CR, please reference this documentation to replicate the Challenge-specific datasets that were made available to participants for the Data Centric Challenge.
 
