@@ -8,4 +8,4 @@ To make dataset file sizes more manageable to merge in the NIDDK-CR Analytics Wo
 
 | Study | Datasets |  Features *    |Participants| Sampling Schema |Data Dictionary|
 |------:|----------|----------------|------------|-----------------|----------------|
-|TEDDY|    48     |8,351          | 234,614    |* All (n = 409) disease cases for T1D in TEDDY, identified by MaskID appearing in DIABETES_DIAGNOSIS dataset| [TEDDY_Data Challenge_Data Dictionary.pdf](https://repository.niddk.nih.gov/media/studies/teddy/TEDDY_Data_Challenge_Data_Dictionary.pdf)|
+|TEDDY|    48     |8,351          | 234,614    | - All (n = 409) disease cases for T1D in TEDDY, identified by MaskID appearing in DIABETES_DIAGNOSIS dataset| [TEDDY_Data Challenge_Data Dictionary.pdf](https://repository.niddk.nih.gov/media/studies/teddy/TEDDY_Data_Challenge_Data_Dictionary.pdf)|
