@@ -6,6 +6,22 @@ ICF Incoperated (Inc.), led by Dr. Ratna Thangudu, performed a multi-step enhanc
 ## Summary of Challenge Datasets
 To make dataset file sizes more manageable to merge in the NIDDK-CR Analytics Workbench environment hosted by AWS, while enabling Challengers to retain as many features as possible, the NIDDK-CR Support Team performed feature redactions and participant sampling (as described in the table below) prior to making the data available in the Workbench environment. This sampling schema retained the maximum number of participants and features that can be successfully merged in the Workbench environment, while maintaining a justifiable and useful study design for many potential use-cases, including multiple disease outcomes and life-course events. 
 
-| Study | Datasets |  Features *    |Participants| Sampling Schema |Data Dictionary|
+| Study | Datasets |  Features *    |Participants| Sampling Schema |Data Dictionary |
 |------:|----------|----------------|------------|-----------------|----------------|
-|TEDDY|    48     |8,351          | 234,614    | All (n = 409) disease cases for T1D in TEDDY, identified by MaskID appearing in DIABETES_DIAGNOSIS dataset. Subset (n = 409) non-disease controls, selected by simple random sample.| [TEDDY_Data Challenge_Data Dictionary.pdf](https://repository.niddk.nih.gov/media/studies/teddy/TEDDY_Data_Challenge_Data_Dictionary.pdf)|
+|TEDDY|    48     |8,351            | 234,614    | All (n = 408) disease cases for T1D in TEDDY, identified by MaskID appearing in DIABETES_DIAGNOSIS dataset**. Subset (n = 409) non-disease controls, selected by simple random sample***.| [TEDDY_Data Challenge_Data Dictionary.pdf](https://repository.niddk.nih.gov/media/studies/teddy/TEDDY_Data_Challenge_Data_Dictionary.pdf)|
+
+(*) Features that were fully empty (i.e., no non-missing values), free-text, or non-informative (i.e., all entries have the same value, or administrative variable) have been redacted from the study datasets.
+
+(**) Disease cases were identified by MaskID appearance in DIABETES_DIAGNOSIS dataset, excluding those MaskIDs with PERCLINICALIMPLEMENTATION == “1”, indicating clinically determined false positives. 
+
+(***) Non-disease controls were sampled from MaskIDs in ENROLLMENT_FORM dataset after excluding MaskIDs of (n = 409) disease cases.
+
+> [!Important]
+> Documentation used to preprocess the TEDDY datasets to generate the Challenge-specific datasets described above are available in the [Challenge Dataset Information](link) folder. Please reference the [NIDDKCR_Data Challenge_TEDDY Redactions](link) file that contains a list of features that were redacted/dropped from the TEDDY datasets to generate the Challenge-specific datasets.
+>
+> If you are requesting access to, or have access to the TEDDY data from the NIDDK-CR, please reference this documentation to replicate the Challenge-specific datasets that were made available to participants for the Data Centric Challenge.
+> 
+> ### Study Documentation
+Additional information about the TEDDY study and corresponding documentation (e.g., protocols/MOPs, data collection instruments, etc.) are available on the NIDDK-CR website: https://repository.niddk.nih.gov/studies/teddy/
+
+
