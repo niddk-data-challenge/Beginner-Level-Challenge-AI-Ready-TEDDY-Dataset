@@ -8,7 +8,7 @@ For more information about the Data Centric Challenge, submission requirements, 
 ## Summary of Challenge Datasets
 To make dataset file sizes more manageable to merge in the NIDDK-CR Analytics Workbench environment hosted by AWS, while enabling Challengers to retain as many features as possible, the NIDDK-CR Support Team performed feature redactions and participant sampling (as described in the table below) prior to making the data available to Challengers for the Data Centric Challenge. This sampling schema retained the maximum number of participants and features that can be successfully merged in the Workbench environment, while maintaining a justifiable and useful study design for many potential use-cases, including multiple disease outcomes and life-course events. 
 
-| Study | Datasets |  Features *    |Participants| Sampling Schema |Data Dictionary |
+| Study | Datasets |  Features*    |Participants| Sampling Schema |Data Dictionary |
 |------:|----------|----------------|------------|-----------------|----------------|
 |TEDDY|    48     |8,351            | 234,614    | All (n = 408) disease cases for T1D in TEDDY, identified by MaskID appearing in DIABETES_DIAGNOSIS dataset**. Subset (n = 409) non-disease controls, selected by simple random sample***.| [TEDDY_Data Challenge_Data Dictionary.pdf](https://repository.niddk.nih.gov/media/studies/teddy/TEDDY_Data_Challenge_Data_Dictionary.pdf)|
 
