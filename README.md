@@ -24,4 +24,64 @@ If you are requesting access to, or have access to the TEDDY data from the NIDDK
 ### Study Documentation
 Additional information about the TEDDY study and corresponding documentation (e.g., protocols/MOPs, data collection instruments, etc.) are available on the NIDDK-CR website: https://repository.niddk.nih.gov/studies/teddy/
 
+## Generating the AI-Ready Dataset
 
+### Title of Project: A Semantic Data Model to Generate AI-Ready Dataset: Beginner Challenge 
+
+#### _AI-Ready Scripts_
+> [!IMPORTANT]
+> Scripts created by the winning team (ICF Inc.) to generate the AI-ready dataset for TrialNet are available in the [AI-Ready Scripts](link) folder. Instructions on running the scripts and the data dictionary can be found in the README in this folder. Additional information about the AI-ready dataset, data enhancement steps and methods used to generate the AI-ready data, handling of missingness, and potential use-cases for the AI-ready dataset are described in detail below.
+
+#### _Description of AI-Ready Dataset_
+For the beginner-level challenge, we performed a multi-step enhancement process for optimal usability of The Environmental Determinants of Diabetes in the Young (TEDDY) study. Initially we transformed the 50+ studies into a single RAW file ensuring data completeness, accommodating multiple records per MaskID, and handling specific study nuances. For generating the AI-Ready dataset, observations were structured based on timepoints, and various data elements underwent normalization, including time value formatting, code standardization, and text processing. Categorical variables were encoded, generating additional columns where necessary. These refinements result in a standardized, cleaned dataset suitable for diverse AI applications in Type 1 Diabetes research. We have detailed the various enhancements and transformations in this document. More in-depth documentation is provided as inline documentation within the code, the data dictionary, and the README files. 
+
+#### _Data Enhancements and Methods used for preparing AI-ready dataset_
+To produce initial the RAW file, the following transformations were done: 
+
+- When reading in each file, columns were checked for completeness. Those with <5% observations (relative to the number of participants in that particular study) were removed. 
+
+- For studies with multiple records per case, additional columns were added representing each observation such that each participant was represented by one row in the final table. 
+
+- For the “TEST_RESULTS” study, each observation was split into its own set of columns. 
+
+- File names were appended to the beginning of the column names for every file. 
+
+To produce the final "AI Ready" file, the initial transformations were to: 
+
+- For studies which had observations corresponding to different timepoints: 
+
+- The observations were split into bins based on the median number of records per case (or a maximum of 3). When there were multiple values per bin, the mean of numeric values was taken, or the mode (first in case of a tie) of categorical values was taken. 
+
+- Where observations were not differentiated by timepoint, the summary (mean/mode) for that column was taken. 
+
+- For columns containing time values, after correcting any formatting errors, all time values were converted to the total minutes since midnight. 
+
+- Codes were kept in either uppercase or lowercase except for language codes, which were converted to lowercase according to ISO 639 recommendations, and country codes, which were converted to uppercase according to ISO 3166 recommendations. 
+
+- For text columns that contained values other than codes or time, the processing included removing contractions, white spaces, and punctuation, converting the text to lowercase, and checking all words longer than four characters for misspellings using the pyspellchecker module. We reviewed the list of identified misspellings, and any false hits (such as medication names) were added to the "do not change" list. For true misspellings that were not corrected properly by pyspellchecker, we assigned a proper correction and stored them in a dictionary for the final misspelling corrections. 
+
+- All the null values in the text columns have been substituted with the phrase 'not reported'. 
+
+- For the categorical columns, we used one-hot encoding where each categorical variable in a column is represented by a binary vector. This resulted in creating additional columns for each categorical variable, with the column names including the categorical variable. If a categorical variable was present, its corresponding value in the column is set to “1”, and if it was not present, the value is set to “0”. The MaskID column was the only categorical column that was not included in the encoding process.
+
+#### _How did you handle the missing data_
+Yes. For string missing values, we replaced them with phrase "not reported". For numeric missing values, we evaluated the completeness of the numeric features and kept the tsfeatures with more than 50% completeness. To impute the missing values, we used the Multiple Imputation by Chained Equation algorithm. This algorithm performs multiple regression over the sample data and takes averages of them. We implemented this algorithm using the fancyimpute Python library. 
+
+When binning the observations by timepoint, cases where a value was missing during a particular observation were replaced with the value of the closest timepoint. 
+
+#### _Potential Use-cases for AI-Ready Dataset_
+The NIDDK-CR Data Centric Challenge involved transforming data from 50 studies into a single raw data file and making it AI-ready through various transformations. The initial RAW file was generated by checking column completeness, generating a wide format to handle timepoint data with multiple records per Mask ID, splitting the diagnostic test-type columns to individual properties, and appending file names to column names to maintain traceability. 
+
+For the AI-ready file, additional transformations included formatting time values, text normalization, spelling correction, preserving codes, and replacing null values. The observations were grouped into bins based on timepoints, and for non-timepoint observations, mean/mode summaries were taken. Missing values were imputed using Multiple Imputation by Chained Equation algorithm.  
+
+Some potential use cases for the AI-ready dataset we generated include: 
+
+- With time values formatted, the dataset is suitable for time-to-event analyses, crucial for understanding the development of Type 1 Diabetes over time. 
+
+- Normalized text facilitates natural language processing (NLP) applications, enabling sentiment analysis or extracting meaningful insights from textual data. 
+
+- The imputed and cleaned dataset is helpful to building predictive models for identifying risk factors or predicting outcomes related to Type 1 Diabetes. 
+
+- The log documenting changes made to each feature ensures transparency and traceability in research, supporting comprehensive reporting and reproducibility of results. 
+ 
+We believe these use cases demonstrate the versatility and readiness of the dataset for a range of AI applications in Type 1 Diabetes research. 
