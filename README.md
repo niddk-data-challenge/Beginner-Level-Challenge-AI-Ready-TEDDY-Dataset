@@ -18,10 +18,10 @@ To make dataset file sizes more manageable to merge in the NIDDK-CR Analytics Wo
 
 > [!Important]
 > Documentation used to preprocess the TEDDY datasets to generate the Challenge-specific datasets described above are available in the [Challenge Dataset Information](link) folder. Please reference the [NIDDKCR_Data Challenge_TEDDY Redactions](link) file that contains a list of features that were redacted/dropped from the TEDDY datasets to generate the Challenge-specific datasets.
->
-> If you are requesting access to, or have access to the TEDDY data from the NIDDK-CR, please reference this documentation to replicate the Challenge-specific datasets that were made available to participants for the Data Centric Challenge.
-> 
-> ### Study Documentation
+
+If you are requesting access to, or have access to the TEDDY data from the NIDDK-CR, please reference this documentation to replicate the Challenge-specific datasets that were made available to participants for the Data Centric Challenge.
+
+### Study Documentation
 Additional information about the TEDDY study and corresponding documentation (e.g., protocols/MOPs, data collection instruments, etc.) are available on the NIDDK-CR website: https://repository.niddk.nih.gov/studies/teddy/
 
 
