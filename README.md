@@ -48,7 +48,7 @@ To produce initial the RAW file, the following transformations were done:
 
 - File names were appended to the beginning of the column names for every file. 
 
-To produce the final "AI Ready" file, the initial transformations were to: 
+To produce the final "AI-Ready" file, the initial transformations were to: 
 
 - For studies which had observations corresponding to different timepoints: 
 
